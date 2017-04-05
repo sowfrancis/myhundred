@@ -1,0 +1,13 @@
+<div class="search_bar">
+  <%= form_for search_path, method: :get, html: {class: "search"} do |f| %>
+    <div class="form_input">
+      <div class="submit">
+        <%= button_tag "", class: "glyphicon glyphicon-search" %>
+      </div>
+      <div class="search">
+        <%= text_field_tag :q, params[:q], :id => "query", class: "input" %>
+      </div>
+    </div>
+  <% end %>
+</div>
+<%= render "autocompletes/autocomplete"%>

@@ -1,0 +1,10 @@
+<h1>Song search</h1>
+
+<%= form_for search_path, method: :get do |f| %>
+  <p>
+    <%= f.label "Search for" %>
+    <%= text_field_tag :q, params[:q], :id => "query", class: "form-control" %>
+    <%= submit_tag "Go", name: nil, class: "button" %>
+  </p>
+<% end %>
+<%= render "autocompletes/autocomplete" %>

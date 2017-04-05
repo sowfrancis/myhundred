@@ -1,0 +1,25 @@
+<%= render 'search/search_bar'%>
+<div class="users">
+  <div class="users_place">
+    <% if params[:q].present? %>
+      <%= render "users/results"%>
+    <%else%>
+      <div class="current_user col-md-2 form group">
+        <div class="box size11 ">
+          <%= image_tag current_user.avatar.url, class: "currentuser_avatar" %>
+        </div>
+      </div>
+      <% @friendships.each do |friendship| %>
+        <div class="box size11">
+          <% if friendship.friend.avatar? %>
+            <%= image_tag friendship.friend.avatar.url, class: "user_avatar" %>
+          <% else %>
+            <%= image_tag "ionic.png", class: "user_avatar"%>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'scriptjs/circle'%>

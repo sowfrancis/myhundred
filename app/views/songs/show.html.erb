@@ -1,0 +1,26 @@
+<section class="img-fill" style="background-image: url('<%= @song.image.url %>');">
+  <div class="song_show">
+    <ul class="no-bullet">
+      <li><%= @song.name %></li>
+      <% if @song.link_music.present?%>
+        <li><%= youtube_embed(@song.link_music)%></li>
+      <% end %>
+    </ul>
+    <hr>
+  </div>
+  <div class="animated infinite bounce">
+    <%= @song.description %>
+  </div>
+<!--   <div class="comment_form">
+    <%= render 'comments/form' %>
+  </div>
+  <hr>
+  <% @comments.each do |comment| %>
+    <div class="user">
+      <%= comment.user.email %>:
+      <%= comment.content %>
+    </div>
+    crée le <%= comment.created_at.strftime("%d-%m-%Y")%>
+  <% end %>
+ -->
+ </section>

@@ -1,0 +1,95 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* user show */
+
+.avatar_user{
+  border: 1px solid;
+  height: 250px;
+}
+
+.currentuser_avatar{
+  height: 100px;
+  border-radius: 50px;
+}
+
+hr{
+  width: 80%;
+}
+
+.img_user{
+  height: 250px;
+  width: 100%;
+}
+
+.user_avatar{
+  height: 100px;
+  border-radius: 50px;
+}
+
+.item{
+  float: left;
+  transition: 100ms ease-out;
+  -moz-transition: 100ms ease-out;
+  -webkit-transition: 100ms ease-out;
+  -o-transition: 100ms ease-out;
+  -ms-transition: 100ms ease-out;
+}
+
+.home_users{
+  background-image: #696969;
+}
+
+.bar{
+  border-radius: 50px;
+  width: 50%;
+}
+
+.menu{
+  text-align: center;
+}
+
+
+
+.users{
+}
+
+.user_infos{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.avatar_user_index{
+  border: 1px solid;
+  height: 100px;
+  width: 50%;
+  margin: auto;
+}
+
+#new_user{
+  width: 50%;
+  margin: auto;
+}
+
+.current_user{
+  display: block;
+  margin: auto;
+}
+
+.another_circle{
+  width: 700px;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 700px;
+  padding: 220px;
+}
+
+.box{
+  text-align: center;
+}
+
+/*.users_place{
+  width: 2000px;;
+}*/

@@ -1,0 +1,7 @@
+<div class="single_song">
+  <%= form_for @comment do |f| %>
+    <%= f.text_area :content, size: "10x5" %>
+    <%= f.hidden_field :song_id, value: @song.id %>
+    <%= f.submit "go", class: "button"%>
+  <% end %>
+</div>

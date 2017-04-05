@@ -1,0 +1,10 @@
+<% @inverse_friendships.each do |friendship| %>
+  <% if friendship.friend.present? %>
+    <%= link_to user_path(friendship.user.id) do %>
+      <%= friendship.user.email %>
+    <% end %>
+  <% end %>
+  <div class="remove">
+    <%= link_to "remove", friendship, method: :delete %>
+  </div>
+<% end %>

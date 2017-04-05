@@ -1,0 +1,46 @@
+// Place all the styles related to the homepages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*homepage*/
+
+.homepage{
+  background-image: linear-gradient(25deg, #E83E39,#EC683D,#FF3FE5);
+  background-repeat: no-repeat;
+  margin: 0;
+  background-attachment: fixed;
+}
+
+.connect_logo{
+  border-right: 1px solid beige;
+  width: 90px;
+}
+
+.connect_logo_right{
+  margin-left: 15px;
+}
+
+.list-inline{
+  border: 1px solid beige;
+  display: flex;
+  line-height: 3;
+  border-radius: 50px;
+  margin-left: 33% !important;
+  margin-right: 38%;
+}
+
+.connect{
+  margin-top: 40px;
+  padding-left: 75px;
+}
+
+.title{
+  text-align: center;
+  margin: 10%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.title_homepage{
+  color: white;
+}

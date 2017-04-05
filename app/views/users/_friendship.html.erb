@@ -1,0 +1,10 @@
+<% @friendships.each do |friendship| %>
+  <% if friendship.friend.present? %>
+    <%= link_to user_path(friendship.friend.id) do %>
+      <%= friendship.friend.email %>
+    <% end %>
+  <% end %>
+  <div class="remove">
+    <%= link_to "remove", friendship, method: :delete %>
+  </div>
+<% end %>

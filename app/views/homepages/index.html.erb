@@ -1,0 +1,19 @@
+<div class="title">
+  <%= image_tag("MY100.png",class: "logo_img", size: "200x100") %>
+  <h1 class="title_homepage">CULTURAL LEGACY</h1>
+  <h2 class="title_homepage">Connecte-toi pour t'inspirer et contribuer au patrimoine de l'humanité</h2>
+  <div class="connect">
+    <ul class="list-inline">
+      <li class="connect_logo"><%= image_tag("facebook-letter-logo.png") %></li>
+      <li class="connect_logo"><%= image_tag("twitter.png") %></li>
+      <li class="connect_logo">
+        <%= image_tag("google-glass-logo.png") %>
+      </li>
+      <li class="connect_logo_right">
+        <%= link_to new_user_session_path do %>
+          <%= image_tag("gmail.png") %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>

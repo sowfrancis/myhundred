@@ -1,0 +1,26 @@
+<script>
+    var songs = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.whitespace("name", "image"),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      remote: {
+        url: '/songs/autocomplete?query=%QUERY',
+        wildcard: '%QUERY'
+      }
+    });
+
+
+    $('#query').typeahead(null, {
+      highlight: true,
+      name: "songs",
+      display: "name",
+      templates: {
+        empty: [
+          '<div class="empty-message">',
+            'Not found',
+          '</div>'
+        ].join('\n'),
+        suggestion: Handlebars.compile('<div class><img class="img_auto" src="{{image}}"/>' + '{{name}}</div>')
+      },
+      source: songs.ttAdapter()
+    });
+</script>

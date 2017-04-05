@@ -1,0 +1,16 @@
+<% @results.each do |user| %>
+  <ul class="all-blogs">
+    <% if user.class.name == "User" %>
+      <li class="media">
+        <%= link_to user_path(user), class: "pull-left" do %>
+        <img src="<%= user.avatar.url%>" alt="..." class="img_song">
+        <% end %>
+        <div class="media-body">
+          <h4 class="media-heading"></h4>
+          <p class="name"><%= user.fullname%></p>
+        </div>
+        <%= link_to "Add Friend", friendships_path(friend_id: user.id), :method => :post %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

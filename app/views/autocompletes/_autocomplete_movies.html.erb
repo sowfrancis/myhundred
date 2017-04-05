@@ -1,0 +1,25 @@
+<script>
+    var movies = new Bloodhound({
+      datumTokenizer: Bloodhound.tokenizers.whitespace("title", "poster", "id"),
+      queryTokenizer: Bloodhound.tokenizers.whitespace,
+      remote: {
+        url: '/movies/autocomplete?query=%QUERY',
+        wildcard: '%QUERY'
+      }
+    });
+
+
+    $('#autocomplete').typeahead(null, {
+      name: "movies",
+      display: "title",
+      templates: {
+        empty: [
+          '<div class="empty-message">',
+            'Not found',
+          '</div>'
+        ].join('\n'),
+        suggestion: Handlebars.compile('<div><img class="img_auto" src="{{poster}}"/>' + '{{title}}</div>')
+      },
+      source: movies.ttAdapter()
+    });
+</script>

@@ -1,0 +1,23 @@
+<div class='row'>
+  <h4> Ajoute un new Morceau</h4>
+  <div class="form_song">
+    <%= form_for @song do |f| %>
+      <div class="input-group">
+        <%= f.label :image %>
+        <img id='img-upload'/>
+        <%= f.file_field :image, class: "btn btn-default btn-file", type: "file", id: "imgInp" %>
+      </div>
+      <div class="input-group">
+        <%= f.label :music %>
+        <%= f.file_field :music, class: "btn btn-default btn-file", type: "file" %>
+      </div>
+      <div class="input-group">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control", size: "50x10" %>
+      </div>
+      <div class="input-group">
+        <%= f.submit "go", class: "btn btn-lg btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,191 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require twitter-bootstrap-static/sprites
+ *= require_tree .
+*/
+@font-face {
+   font-family: 'Glyphicons Halflings';
+   src: url('/assets/glyphicons-halflings-regular.eot');
+   src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+        url('/assets/glyphicons-halflings-regular.woff') format('woff'),
+        url('/assets/glyphicons-halflings-regular.ttf') format('truetype'),
+        url('/assets/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+
+body{
+  background-color: #696969;
+}
+
+.row{
+  padding: 40px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.navbar{
+  margin-bottom: 0px !important;
+}
+
+.band{
+  height: 100px;
+}
+
+.animated{
+  width: 50%;
+  margin: auto;
+}
+
+.container-full{
+  width: 100%;
+  background-color: #696969;
+}
+
+
+.music{
+  float: left !important;
+  background-color: #FFFF;
+}
+
+
+.zoom_js{
+  float: right;
+}
+
+/* search box */
+
+.search_bar{
+  margin: 20px;
+}
+
+.form_input{
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 50px;
+  line-height: 2;
+}
+
+.input{
+  background: transparent;
+  border: none;
+  width: 520px;
+  color: white;
+}
+
+.users_index{
+  background-color: #262626;
+  width: 1700px;
+}
+
+.submit{
+  margin-left: 25px;
+  border-right: 1px solid white;
+}
+
+.glyphicon.glyphicon-search{
+  margin-right: 20px;
+}
+
+.tt-menu{
+  background-image: linear-gradient(25deg, rgb(232, 62, 57), rgb(236, 104, 61), rgb(255, 63, 229));
+  width: 100%;
+  margin-top: 5px;
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 396px;
+  height: 30px;
+  padding: 8px 12px;
+  font-size: 15px;
+  line-height: 30px;
+  border: 2px solid #ccc;
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  outline: none;
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid #0097cf;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-dropdown-menu {
+  width: 422px;
+  margin-top: 12px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #0097cf;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+tt-highlight{
+    color:red;
+}
+
+.img-auto{
+  width: 90px;
+  height: 90px;
+}
+
+#autocomplete{
+  width: 500px;
+}
+
+#home{
+  background-color: #696969;
+}
+
+#menu1{
+  background-color: #696969;
+}
+
+#menu2{
+  background-color: #696969;
+}
+
+.img_auto{
+  height: 90px;
+  width: 90px;
+}

@@ -1,0 +1,21 @@
+<h4> Ajoute un nouveau film</h4>
+<div class="form_song">
+  <%= form_for @movie do |f| %>
+    <div class="input-group">
+      <h3>Titre du Film</h3>
+      <div class="input">
+        <%= f.text_field :title, class: "form-control", id: "autocomplete" %>
+      </div>
+
+      <div class="input-group">
+        <%= f.label :story %>
+        <%= f.text_area :story, class: "form-control", size: "50x10" %>
+      </div>
+    </div>
+    <div class="input-group">
+    <%= f.submit "go", class: "btn btn-lg btn-primary" %>
+    </div>
+  <%end %>
+</div>
+
+<%= render "autocompletes/autocomplete_movies" %>

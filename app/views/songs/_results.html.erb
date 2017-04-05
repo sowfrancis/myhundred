@@ -1,0 +1,17 @@
+<% @results.each do |song| %>
+  <ul class="all-blogs">
+    <% if song.class.name == "Song" %>
+      <li class="media">
+        <%= link_to song_path(song), class: "pull-left" do %>
+        <img src="<%= song.image.url%>" alt="..." class="img_song">
+        <% end %>
+        <div class="media-body">
+          <h4 class="media-heading"></h4>
+          <p class="name"><%= song.user.email%></p>
+        </div>
+        <%= link_to "Ajouter", add_song_songs_path(song) %>
+        <%= link_to "Add Friend", friendships_path(friend_id: song.user.id), :method => :post %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

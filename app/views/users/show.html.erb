@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="avatar_user">
+      <%= image_tag @user.avatar.url, class: "img_user" %>
+    </div>
+    <div class="user_infos">
+      <hr>
+      <%= @user.fullname %>
+      <%= link_to "editer", edit_user_path(@user) %>
+    </div>
+    <hr>
+    <div class="friends">
+      <% if current_user.id == @user.id %>
+        <%= render 'users/friendship' %>
+      <% else %>
+        <%= render 'users/inverse_friendship'%>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-md-9 songs_user">
+    <% @songs.each do |song| %>
+      <ul class="all-blogs">
+        <li class="media">
+          <%= link_to song_path(song), class: "pull-left" do %>
+          <img src="<%= song.image.url%>" alt="..." class="img_song">
+          <% end %>
+          <div class="media-body">
+            <h4 class="media-heading"></h4>
+            <p class="name"><%= song.user.email%></p>
+          </div>
+          <%= link_to "Ajouter", add_song_songs_path(song) %>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</div>

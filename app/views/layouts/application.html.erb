@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <% if controller_name == "users" && action_name == "index"%>
+    <body class="users_index">
+      <% if user_signed_in? %>
+        <% if controller_name == "users" && action_name == "index" %>
+        <%else %>
+          <%= render 'layouts/navbar' %>
+        <% end %>
+      <% end %>
+      <%= render 'layouts/errors' %>
+      <%= yield %>
+    </body>
+  <% else %>
+    <body class="<%= @home_page ? 'homepage' : ''%>">
+      <% if user_signed_in? %>
+        <%= render 'layouts/navbar' %>
+        <div class="container-full">
+          <%= render 'layouts/errors' %>
+        </div>
+      <%end %>
+      <%= yield %>
+    </body>
+  <% end %>
+</html>
